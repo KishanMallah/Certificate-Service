@@ -6,61 +6,35 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/certificate', {useNewUrlParser: true});
 
 var seederList = [
-  new Access({
-    email: 'kishan.m@quantinsti.com',
-    access_type: 'R/W'
-  }),
-  new Access({
-    email: 'kishanmallah1993@gmail.com',
-    access_type: 'R'
-  }),
-  new Template({
-    name : 'QuantInsti',
-    course: [{
-      name: 'QI101',
-      template : {
-          layout: 'layout1'
-      }
-    }, {
-      name: 'QI102',
-      template : {
-          layout: 'layout2'
-      }
-    }, {
-      name: 'QI103',
-      template : {
-          layout: 'layout3'
-      }
-    }]
-  }),
-  new Template({
-    name : 'Quantra',
-    course: [{
-      name: 'QT101',
-      template : {
-          layout: 'layout1'
-      }
-    }, {
-      name: 'QT102',
-      template : {
-          layout: 'layout2'
-      }
-    }, {
-      name: 'QT103',
-      template : {
-          layout: 'layout3'
-      }
-    }]
-  }),
+  // new Access({
+  //   email: 'kishan.m@quantinsti.com',
+  //   unique_id: '123454',
+  //   access_type: 'read'
+  // }),
+  // new Access({
+  //   email: 'kishanmallah1993@gmail.com',
+  //   unique_id: '32665',
+  //   access_type: 'write'
+  // }),
+  // new Template({
+  //   course_name: 'Python',
+  //   platform_name: 'Quantra',
+  //   template: {
+  //     certificate_image: 'certificate_python'
+  //   }
+  // }),
+  // new Template({
+  //   course_name: 'Machine Learning',
+  //   platform_name: 'Quantra',
+  //   template: {
+  //     certificate_image: 'certificate_ml'
+  //   }
+  // }),
   new Certificate({
-    name: 'Kishan',
-    email: 'kishanmallah.m@quantinsti.com',
-    service: [{
-      name: 'Quantinsti',
-      course: [{
-        name: 'EPAT',
-      }]
-    }]
+    user_name: 'kishan Mallah',
+    email: 'kishanmallah199@gmail.com',
+    unique_id: '123465789',
+    course_id :'132'
   })
 ];
 

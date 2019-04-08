@@ -6,18 +6,15 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
-
 var indexV1Router = require('./routes/versions/v1/index');
 
-
 var app = express();
-
 
 mongoose.connect('mongodb://localhost/certificate', {useNewUrlParser: true});
 
 // view engine setup
 app.engine('.hbs', expressHbs({
-  defaultLayout: 'layout',
+  defaultLayout: 'layout-default',
   extname : '.hbs'
 }));
 

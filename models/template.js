@@ -2,22 +2,20 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-  name: {
+  course_name: {
     type: String,
-    required:[true, 'email fiels is empty']
+    required:[true, 'couese name is empty']
   },
-  course: [{
-      name: {
-        type: String,
-        required:[true, 'email fiels is empty']
-      },
-      template : {
-          layout: {
-            type: String,
-            required:[true, 'email fiels is empty']
-          }
-      }
-    }]
+  platform_name: {
+    type: String,
+    required:[true, 'platform name is empty']
+  },
+  template: {
+    certificate_image: {
+      type: String,
+      default: 'certificate_default'
+    }
+  } 
 });
 
 module.exports = mongoose.model('certificate_template', schema);
